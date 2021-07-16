@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="id1">
+    </select>
+    <input type="text" name="name1" id="">
+    <select id="course1">
+    </select>    
+    <script>
+        var students=[
+            {'id':101,'name':'bhargavi','course':'PHP'},
+            {'id':102,'name':'kowsalya','course':'C'},
+            {'id':103,'name':'logeshwari','course':'Java'}
+       ];
+       var m=document.querySelector("#id1");
+       var n=document.querySelector("#course1");
+       for(let s of students)
+       {
+           document.writeln(s['id']);
+           document.writeln(s['name']);
+           document.write(s['course']);
+           var d=document.createElement("option");
+        d.setAttribute('value',s['id']);
+        d.textContent=s['id'];
+           var c=document.createElement("option");
+        c.setAttribute('value',s['course']);
+        c.textContent=s['course'];
+        console.log(c);
+        m.appendChild(d);
+        n.appendChild(c);
+           document.write('<br/>');
+       }
+        
+       
+    </script>
+</body>
+</html>

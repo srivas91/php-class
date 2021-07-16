@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display timer</title>
+    <style>
+        b{
+            color:blue;
+        }
+        #container
+        {
+            background-color: yellow;
+            width:270px;
+        }
+    </style>
+</head>
+<body>
+    <b>Summer Sale Ends in </b><br/>
+    <div id="container">
+   <span id="days"></span>:
+   <span id="hours"></span>:
+   <span id="minutes"></span>:
+   <span id="seconds"></span>
+</div>
+   <!-- <div id="days"></div>:
+   <div id="hours"></div>:
+   <div id="minutes"></div>:
+   <div id="seconds"></div> -->
+    <script>
+        window.onload=timerfun();
+        function timerfun(){    
+        var countdowntime=new Date("June 10, 2021 14:34:22").getTime();  //4300secs
+       var currentday=new Date().getTime();  //4200 secs  since 1,January,1970
+       var timeleft=countdowntime-currentday;
+    //    console.log(countdowntime);
+      console.log(timeleft);
+       var days=Math.floor(timeleft/(24*60*60*1000));  
+       var hours=Math.floor((timeleft%(24*60*60*1000))/(60*60*1000));  // 24*12/12
+       var minutes=Math.floor(((timeleft%(60*60*1000))/(60*1000)));
+       var seconds=Math.floor(((timeleft%(60*1000))/(1000)));
+
+       document.querySelector("#days").innerHTML=days+"Days";
+       document.querySelector("#hours").innerHTML=hours+"Hours";
+       document.querySelector("#minutes").innerHTML=minutes+"Minutes";
+       document.querySelector("#seconds").innerHTML=seconds+"Seconds";
+    //    console.log(days);
+    //    console.log(hours);
+    //    console.log(minutes);
+    //    console.log(seconds);
+        }
+        setInterval(timerfun,1000);
+    </script>
+</body>
+</html>

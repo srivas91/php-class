@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  .required::after
+    {
+        content:'*';
+        color:red;
+    }
+    input[type=submit]
+    {
+        text-transform: capitalize;
+        color:blue;
+        background-color: violet;
+        width:100px;
+        border-radius:20px;
+    }
+    
+    input[type=reset]
+    {
+        text-transform: capitalize;
+        color:blue;
+        background-color: violet;
+        width:100px;
+        border-radius:20px;
+    }
+    </style>
+</head>
+<body>
+    <form action="addstud.php" method="post">
+        <h4><span style="color:red">*</span>-required</h4>
+        <label for="stuid" class="required">Student Id</label><input type="text" name="stuid" id="stuid" required><br/>
+        <label for="stuname" class="required">Student Name</label><input type="text" name="stuname" id="stuname" required><br/>
+        <label for="course" class="required">course</label>
+        <select name='course'>
+        <option value='php'>PHP</option>
+        <option value='java'>Java</option>
+        </select><br/>
+        <label for="mobile" class="required">Mobile Number</label><input type="text" name="mobile" id="mobile" pattern="[0-9]{10}" required><br/>
+        <label for="email">Email Id</label><input type="email" name="email" id="email"  ><br/>
+         <input type="submit" value="add student">
+         <input type="reset" value="cancel">
+    </form>
+</body>
+</html>

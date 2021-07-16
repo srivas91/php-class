@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function wish()
+        {
+           var today=new Date();
+           var date=today.getDate();
+           var month=today.getMonth();
+           var year=today.getFullYear();
+           document.writeln(today);
+           document.write("<br/>");
+           document.write(date);
+           document.write("<br/>");
+           document.write(month+1);
+           document.write("<br/>");
+           document.write(year);
+        }
+        // setInterval(wish,1000);
+          setTimeout(wish,2000);  // 2000 milli seconds-2 seconds
+    </script>
+</body>
+</html>

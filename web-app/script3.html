@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        
+         var students=["bhargavi","kowsalya","logeshwari"];
+       
+        //  function convert(a)
+        //  {
+        //      return a.toUpperCase();
+        //  }
+
+         function nameresult(b)
+         {
+             if(b.startsWith('k'))
+             {
+                 return true;
+             }
+             else
+             {
+                 return false;
+             }
+         }
+        //  let result=students.map(convert);
+        //  console.log(result);
+
+        let myname=students.filter(nameresult);
+        console.log(myname);
+
+        // students.push('deepa');
+        // students.push('vinitha');
+        // console.log(students);
+        // console.log(students.pop());
+        // console.log(students);
+    </script>
+</body>
+</html>

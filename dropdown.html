@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--UTF-Unicode Transformation Format   
+        ISO-8859-8 for English-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My link</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>    
+        #nav ul {
+            list-style-type: none;
+        }
+
+        #nav ul li ul {
+            display: none;
+        }
+
+        #nav a {
+            text-decoration: none;
+            float: left;
+            padding: 10px;
+            background-color: yellow;
+            color: blue;
+        }
+
+        #nav ul li:hover>ul {
+            display: block;
+            position:absolute;
+            margin-top:40px;
+            margin-left:250px; 
+            outline:solid;
+            outline-color:blue;
+        }
+    </style>
+</head>
+
+<body bgcolor=cyan>
+    <div id="nav">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">contact us</a></li>
+            <li><a href="#">Courses offered<i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>PHP</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

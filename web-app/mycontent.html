@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #id1
+        {
+            color:blue;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <span id="id1">Logeshwari and Bhargavi are good friends</span>
+    <script>
+        var s=document.getElementById("id1");
+        s.innerHTML="<center><i>Kowsalya is a topper in the class</i></center>";
+        s.style.color="red";
+        s.style.fontWeight="bold";
+        console.log(s);
+    </script>
+</body>
+</html>

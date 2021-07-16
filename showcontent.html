@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+         .cls1
+         {
+             display:block;
+         }
+         .cls2
+         {
+             display:none;
+         }
+     </style>
+</head>
+<body>
+    <h2 id="id1">Stay Safe.Because of Covid</h2>
+    <input type="button" value="show" onclick="showcontent()">
+    <!-- <input type="button" value="show" onclick="showcontent()">
+    <input type="button" value="hide" onclick="hidecontent()"> -->
+    <script>
+        var s=document.querySelector("#id1");
+       function showcontent()
+       {    
+          s.classList.remove('cls2');
+          s.classList.add('cls1');
+          console.log(s);
+       }
+       function hidecontent()
+       {
+        s.classList.add('cls2');
+        console.log(s);
+       }
+    </script>
+</body>
+</html>

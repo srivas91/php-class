@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+         .cls1
+         {
+             display:block;
+         }
+         .cls2
+         {
+             display:none;
+         }
+     </style>
+</head>
+<body>
+    <h2 id="id1">Put Vaccination as soon as possible</h2>
+    <input type="button" value="show/hide" onclick="togglecontent()">
+    <script>
+        var s=document.querySelector("#id1");
+        s.classList.add('cls1');
+       function togglecontent()
+       {   
+           if(s.classList.contains('cls1'))
+           { 
+          s.classList.toggle('cls2');
+          console.log(s);
+           }
+       }
+    </script>
+</body>
+</html>
